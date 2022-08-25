@@ -1,0 +1,141 @@
+.container{
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1{
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--expense-light-hover)
+}
+
+h2{
+  margin-top: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Rubik Dirt', cursive;
+}
+
+h3{
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4{
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container{
+  background: var(--secondary);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div{
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type{
+  border-right: 1px solid var(--outline);
+}
+
+.money{
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus{
+  color: var(--amount);
+}
+
+.money.minus{
+  color: var(--expense);
+}
+
+.transactions{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transactions li{
+  background: var(--secondary);
+  box-shadow: var(--box-shadow);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 1px 0;
+}
+
+.transactions li.plus{
+  border-right: 5px solid var(--amount);
+}
+
+.transactions li.minus{
+  border-right: 5px solid var(--expense);
+}
+
+.delete-btn{
+  cursor: pointer;
+  background: var(--red);
+  border: 0;
+  color: var(--white);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.transactions li:hover .delete-btn{
+  opacity: 1;
+}
+
+label{
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"]{
+  display: block;
+
+  border: 1px solid var(--secondary);
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn{
+  display: block;
+
+  cursor: pointer;
+  background: var(--amount);
+  box-shadow: var(--box-shadow);
+  color: var(--white);
+  border: 0;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
